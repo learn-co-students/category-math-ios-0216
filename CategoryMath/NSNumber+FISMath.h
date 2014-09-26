@@ -10,4 +10,9 @@
 
 @interface NSNumber (FISMath)
 
+-(NSNumber *)add:(NSNumber *)number;
+-(NSNumber *)subtract:(NSNumber *)number;
+-(NSNumber *)multiplyBy:(NSNumber *)number;
+-(NSNumber *)divideBy:(NSNumber *)number;
+
 @end
