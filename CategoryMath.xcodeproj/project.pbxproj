@@ -12,6 +12,7 @@
 		31B0BDEFFF3A4FBC9B60573B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6138509A5EC48AD80648958 /* Foundation.framework */; };
 		58025F34C33F409AB9275D23 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */; };
 		72004B0E1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72004B0D1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m */; };
+		72004B0C1A16931F0022D943 /* NSNumber+FISMathAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */; };
 		7223E42419D5BF9000E06AB0 /* NSNumber+FISMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */; };
 		7223E42619D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7223E42519D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m */; };
 		F5858952A0174ED38C4595AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB8BE8A3CB9436CA7983262 /* Images.xcassets */; };
@@ -34,6 +35,8 @@
 		5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
 		6FCB94E5152740AEAA072B42 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72004B0D1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathAdvancedSpec.m"; sourceTree = "<group>"; };
+		72004B0A1A16931F0022D943 /* NSNumber+FISMathAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+FISMathAdvanced.h"; sourceTree = "<group>"; };
+		72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathAdvanced.m"; sourceTree = "<group>"; };
 		7223E42219D5BF9000E06AB0 /* NSNumber+FISMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+FISMath.h"; sourceTree = "<group>"; };
 		7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMath.m"; sourceTree = "<group>"; };
 		7223E42519D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathSpec.m"; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */,
 				7223E42219D5BF9000E06AB0 /* NSNumber+FISMath.h */,
 				7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */,
+				72004B0A1A16931F0022D943 /* NSNumber+FISMathAdvanced.h */,
+				72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */,
 				10F477D17DC0405CB9FE5612 /* Resources */,
 			);
 			path = CategoryMath;
@@ -313,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72004B0C1A16931F0022D943 /* NSNumber+FISMathAdvanced.m in Sources */,
 				58025F34C33F409AB9275D23 /* FISAppDelegate.m in Sources */,
 				7223E42419D5BF9000E06AB0 /* NSNumber+FISMath.m in Sources */,
 				29300D7F10354B1EBF39D169 /* main.m in Sources */,
@@ -427,6 +433,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
@@ -476,10 +483,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
