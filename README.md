@@ -1,7 +1,4 @@
----
-tags: categories, object-oriented, nsnumber, nsinteger
-languages: objc
----
+
 
 # CategoryMath
 
