@@ -8,75 +8,121 @@
 
 #import "Specta.h"
 #import "NSNumber+FISMath.h"
-
+#define EXP_SHORTHAND
+#import "Expecta.h"
 
 SpecBegin(NSNumberFISMath)
 
 describe(@"NSNumber+FISMath", ^{
-    __block NSNumber *x;
-    __block NSNumber *y;
+    __block NSNumber *pi;
+    __block NSNumber *sqrt2;
+    __block NSNumber *ln2;
     
-    beforeAll(^{
-        x = [NSNumber numberWithInteger:14];
-        y = [NSNumber numberWithInteger:7];
+    __block NSNumber *expected;
+    __block NSNumber *result;
+    __block CGFloat margin;
+    
+    beforeEach(^{
+        pi = @(M_PI);
+        sqrt2 = @(M_SQRT2);
+        ln2 = @(M_LN2);
+        
+        expected = @0;
+        result = @0;
+        margin = 0.000001;
     });
     
-    it(@"should respond to add:",^{
-        expect(x).to.respondTo(@selector(add:));
-    });
-    
-    it(@"should respond to subtract:",^{
-        expect(x).to.respondTo(@selector(subtract:));
-    });
-    
-    it(@"should respond to multiplyBy:",^{
-        expect(x).to.respondTo(@selector(multiplyBy:));
-    });
-    
-    it(@"should respond to divideBy:",^{
-        expect(x).to.respondTo(@selector(divideBy:));
-    });
-    
-    describe(@"add:", ^{
-        it(@"should return an NSNumber", ^{
-            expect([x add:y]).to.beKindOf([NSNumber class]);
+    describe(@"numberByAddingNumber:", ^{
+        it(@"should return the sum of M_PI and M_SQRT2",^{
+            expected = @(M_PI + M_SQRT2);
+            result = [pi numberByAddingNumber:sqrt2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
         
-        it(@"should return the sum of two NSNumbers",^{
-            expect([x add:y]).to.equal(@21);
-        });
-    });
-    
-    describe(@"subtract:", ^{
-        it(@"should return an NSNumber",^{
-            expect([x subtract:y]).to.beKindOf([NSNumber class]);
+        it(@"should return the sum of M_PI and M_LN2",^{
+            expected = @(M_PI + M_LN2);
+            result = [pi numberByAddingNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
         
-        it(@"should return the difference between two NSNumbers",^{
-            expect([x subtract:y]).to.equal(@7);
+        it(@"should return the sum of M_SQRT2 and M_LN2",^{
+            expected = @(M_SQRT2 + M_LN2);
+            result = [sqrt2 numberByAddingNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
     });
     
-    describe(@"multiply:", ^{
-        it(@"should return an NSNumber",^{
-            expect([x multiplyBy:y]).to.beKindOf([NSNumber class]);
+    describe(@"numberBySubtractingNumber:", ^{
+        it(@"should return the difference between M_PI and M_SQRT2",^{
+            expected = @(M_PI - M_SQRT2);
+            result = [pi numberBySubtractingNumber:sqrt2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
         
-        it(@"should return the product of two NSNumbers",^{
-            expect([x multiplyBy:y]).to.equal(@98);
+        it(@"should return the difference between M_PI and M_LN2",^{
+            expected = @(M_PI - M_LN2);
+            result = [pi numberBySubtractingNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
+        });
+
+        it(@"should return the difference between M_SQRT2 and M_LN2",^{
+            expected = @(M_SQRT2 - M_LN2);
+            result = [sqrt2 numberBySubtractingNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
     });
-    
-    describe(@"divide:", ^{
-        it(@"should return an NSNumber",^{
-            expect([x multiplyBy:y]).to.beKindOf([NSNumber class]);
+
+    describe(@"numberByMultiplyingByNumber:", ^{
+        it(@"should return the product of M_PI and M_SQRT2",^{
+            expected = @(M_PI * M_SQRT2);
+            result = [pi numberByMultiplyingByNumber:sqrt2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
         
-        it(@"should return the quotient of two NSNumbers",^{
-            expect([x divideBy:y]).to.equal(2);
+        it(@"should return the product of M_PI and M_LN2",^{
+            expected = @(M_PI * M_LN2);
+            result = [pi numberByMultiplyingByNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
+        });
+        
+        it(@"should return the product of M_SQRT2 and M_LN2",^{
+            expected = @(M_SQRT2 * M_LN2);
+            result = [sqrt2 numberByMultiplyingByNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
         });
     });
     
+    describe(@"numberByDividingByNumber:", ^{
+        it(@"should return the quotient of M_PI and M_SQRT2",^{
+            expected = @(M_PI / M_SQRT2);
+            result = [pi numberByDividingByNumber:sqrt2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
+        });
+        
+        it(@"should return the quotient of M_PI and M_LN2",^{
+            expected = @(M_PI / M_LN2);
+            result = [pi numberByDividingByNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
+        });
+        
+        it(@"should return the quotient of M_SQRT2 and M_LN2",^{
+            expected = @(M_SQRT2 / M_LN2);
+            result = [sqrt2 numberByDividingByNumber:ln2];
+            
+            expect(result).to.beCloseToWithin(expected, margin);
+        });
+    });
 });
 
 SpecEnd

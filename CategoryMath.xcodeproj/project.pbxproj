@@ -11,8 +11,6 @@
 		29300D7F10354B1EBF39D169 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D61D66839CD45E898323BE7 /* main.m */; };
 		31B0BDEFFF3A4FBC9B60573B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6138509A5EC48AD80648958 /* Foundation.framework */; };
 		58025F34C33F409AB9275D23 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */; };
-		72004B0E1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72004B0D1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m */; };
-		72004B0C1A16931F0022D943 /* NSNumber+FISMathAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */; };
 		7223E42419D5BF9000E06AB0 /* NSNumber+FISMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */; };
 		7223E42619D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7223E42519D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m */; };
 		F5858952A0174ED38C4595AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB8BE8A3CB9436CA7983262 /* Images.xcassets */; };
@@ -36,9 +34,6 @@
 		5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
 		5CE73FE89A4074BA2BEF84B6 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FCB94E5152740AEAA072B42 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72004B0D1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathAdvancedSpec.m"; sourceTree = "<group>"; };
-		72004B0A1A16931F0022D943 /* NSNumber+FISMathAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+FISMathAdvanced.h"; sourceTree = "<group>"; };
-		72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathAdvanced.m"; sourceTree = "<group>"; };
 		7223E42219D5BF9000E06AB0 /* NSNumber+FISMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+FISMath.h"; sourceTree = "<group>"; };
 		7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMath.m"; sourceTree = "<group>"; };
 		7223E42519D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+FISMathSpec.m"; sourceTree = "<group>"; };
@@ -87,8 +82,6 @@
 				5837AB42A6D240DA8A07F5E3 /* FISAppDelegate.m */,
 				7223E42219D5BF9000E06AB0 /* NSNumber+FISMath.h */,
 				7223E42319D5BF9000E06AB0 /* NSNumber+FISMath.m */,
-				72004B0A1A16931F0022D943 /* NSNumber+FISMathAdvanced.h */,
-				72004B0B1A16931F0022D943 /* NSNumber+FISMathAdvanced.m */,
 				10F477D17DC0405CB9FE5612 /* Resources */,
 			);
 			path = CategoryMath;
@@ -98,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				7223E42519D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m */,
-				72004B0D1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -228,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FIS;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Flatiron School";
 			};
 			buildConfigurationList = A1D9478A87244EF2836CBF6A /* Build configuration list for PBXProject "CategoryMath" */;
@@ -320,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7223E42619D5BFCD00E06AB0 /* NSNumber+FISMathSpec.m in Sources */,
-				72004B0E1A1695170022D943 /* NSNumber+FISMathAdvancedSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72004B0C1A16931F0022D943 /* NSNumber+FISMathAdvanced.m in Sources */,
 				58025F34C33F409AB9275D23 /* FISAppDelegate.m in Sources */,
 				7223E42419D5BF9000E06AB0 /* NSNumber+FISMath.m in Sources */,
 				29300D7F10354B1EBF39D169 /* main.m in Sources */,
@@ -365,6 +355,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CategoryMath/Resources/Other-Sources/CategoryMath-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatiron.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -383,6 +375,7 @@
 				);
 				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatiron.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -403,6 +396,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CategoryMath/Resources/Other-Sources/CategoryMath-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
@@ -411,6 +405,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatiron.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -461,7 +456,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -490,6 +485,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -512,7 +508,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -530,6 +526,7 @@
 				);
 				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flatiron.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
