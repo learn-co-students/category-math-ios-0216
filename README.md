@@ -25,3 +25,5 @@ Fork and clone this lab. Open the `category-math.xcworkspace` file.
   * perform the relevant operation with those two `CGFloat` values,
   * convert the operation's result to an `NSNumber`, and
   * return the `NSNumber` result.
+
+<a href='https://learn.co/lessons/category-math' data-visibility='hidden'>View this lesson on Learn.co</a>
