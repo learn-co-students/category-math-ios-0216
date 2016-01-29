@@ -26,4 +26,4 @@ Fork and clone this lab. Open the `category-math.xcworkspace` file.
   * convert the operation's result to an `NSNumber`, and
   * return the `NSNumber` result.
 
-<a href='https://learn.co/lessons/category-math' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/category-math' title='Category Math'>Category Math</a> on Learn.co and start learning to code for free.</p>
